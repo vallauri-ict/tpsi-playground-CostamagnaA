@@ -1,0 +1,40 @@
+html{
+    height: 90%;
+    background-color: #777;
+}
+body{
+    height: 90%;
+    margin: 0px;
+    background-color: #777;
+    overflow: hidden;
+}
+#wrapper{
+    width: 380px;
+    height: 100%;
+    padding: 30px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 20px 7px black;
+}
+
+/* ************************************************* */
+h1{
+	margin:25px auto; 
+	text-align:center		
+}
+
+.big{
+  width:140;
+  height:210;
+}
+.min{
+  width:50;
+  height:75;
+  background-size:contain;
+}
+
+input[type=button]{
+	display:block;
+	margin:0 auto;
+}
