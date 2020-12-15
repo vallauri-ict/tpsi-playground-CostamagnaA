@@ -12,6 +12,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/intro.js@2.9.3/introjs.css" rel="stylesheet"/>
+    <script src="js/jQuery.js"></script>
     <script src="js/script.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/index.css">
@@ -22,6 +23,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/intro.js@2.9.3/intro.min.js"></script>
 
     <link rel="shortcut icon" href= "IMG/logo.jpg">
+
+    
 </head>
 
 <body id="page-top">
@@ -39,14 +42,25 @@
             </div>
         </nav><br/>
         <br/><br/><br/>
-        <form id="filtri" data-intro="Filters" data-step="1"><label for="numeroUtenti">Numbers of users&nbsp; &nbsp;&nbsp;</label><input type="range" min="1" max="200" value="100" name="num" class="form-control-range slider" id="sliderUtenti" oninput="sliderCambiato()" /><input type="text" class="form-control" id="numeroUtenti" name="num" oninput="testoCambiato" /><br/>
-            <div id="filtriNazionalita"><label for="abilitaFiltroNazionalita">Nationalities&nbsp; &nbsp;</label><input type="checkbox" value="nat" id="abilitaFiltroNazionalita" class="checkBoxFiltri" onchange="cambiaStatoCheck(value,this)" /></div><br/>
-            <div id="filtriSesso"><label for="abilitaFiltroSesso">Gender&nbsp;</label><input type="checkbox" id="abilitaFiltroSesso" class="checkBoxFiltri" value="gender" onchange="cambiaStatoCheck(value,this)" /></div><br/>
-            <div><label for="abilitaFiltroPassword">Password type&nbsp;&nbsp;</label><input type="checkbox" id="abilitaFiltroPassword" class="checkBoxFiltri" value="password" onchange="cambiaStatoCheck(value,this)" /></div><br/><br/></form>
-            <button class="btn btn-primary" type="button" onclick="generateUsers()" data-intro="Generates new users" data-step="2">Generate users</button>
+        <h2 class="text-uppercase text-center text-secondary mb-0">Filters</h2>
+        <hr class="star-dark mb-5">
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <form id="filtri" data-intro="Filters" data-step="1"><label for="numeroUtenti">Numbers of users&nbsp; &nbsp;&nbsp;</label><input type="range" min="1" max="200" value="100" name="num" class="form-control-range slider" id="sliderUtenti" oninput="sliderCambiato()" /><input type="text" class="form-control" id="numeroUtenti" name="num" oninput="testoCambiato" /><br/>
+                    <div id="filtriNazionalita"><label for="abilitaFiltroNazionalita">Nationalities&nbsp; &nbsp;</label><input type="checkbox" value="nat" id="abilitaFiltroNazionalita" class="checkBoxFiltri" onchange="cambiaStatoCheck(value,this)" /></div><br/>
+                    <div id="filtriSesso"><label for="abilitaFiltroSesso">Gender&nbsp;</label><input type="checkbox" id="abilitaFiltroSesso" class="checkBoxFiltri" value="gender" onchange="cambiaStatoCheck(value,this)" /></div><br/>
+                    <div><label for="abilitaFiltroPassword">Password type&nbsp;&nbsp;</label><input type="checkbox" id="abilitaFiltroPassword" class="checkBoxFiltri" value="password" onchange="cambiaStatoCheck(value,this)" /></div><br/><br/></form>
+                <button class="btn btn-primary" type="button" onclick="generateUsers()" data-intro="Generates new users" data-step="2">Generate users</button>
+            </div>
+        </div>
+
+
+
+
     </section>
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container"><img src="" class="generati"/><h1 id="Name" class="generati"></h1><h1 id="Surname" class="generati"></h1>
+    <header class="masthead bg-primary text-white text-center" id="NomeCognomeFoto">
+        <div class="container"><img src="" class="generati" width="10%"/><h1 id="Name" class="generati"></h1><h1 id="Surname" class="generati"></h1>
             <hr class="star-light">
         </div>
     </header>
@@ -55,19 +69,29 @@
             <h2 class="text-uppercase text-center text-secondary">general information</h2>
             <hr class="star-dark mb-5">
         </div>
-        <div id="userGenerati"><p id="Gender" class="generati"> </p>
-            <p id="Nationality" class="generati"></p>
-            <p id="Email" class="generati"></p>
-            <p id="Password" class="generati"></p>
-        </div><button class="btn btn-primary" type="button" value="1" onclick="cambiaIndice(value)">Next</button><button class="btn btn-primary" type="button" value="-1" onclick="cambiaIndice(value)">Previous</button>
-        <p id="labelContatore"></p>
-        <p id="labelMax"></p>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div id="userGenerati"><p id="Gender" class="generati text-center "> </p>
+                    <p id="Nationality" class="generati text-center"></p>
+                    <p id="Email" class="generati text-center "></p>
+                    <p id="Password" class="generati text-center "></p>
+                </div>
+                <p class="text-center">
+                    <button class="btn btn-primary" type="button" value="1" onclick="cambiaIndice(value)">Next</button><button class="btn btn-primary" type="button" value="-1" onclick="cambiaIndice(value)">Previous</button>
+                </p>
+                <p id="labelContatore" class="text-center"></p>
+                <p id="labelMax" class="text-center"></p>
+            </div>
+        </div>
+
+
     </section>
 
     <footer class="footer text-center"><div class="container">
         <div id="location">
             <h4 class="text-uppercase mb-4">Location</h4>
-            <p>Via chiari 48       </p>
+            <p>Via chiari 48</p>
             <p>
                 Narzole (CN) 12068
             </p>

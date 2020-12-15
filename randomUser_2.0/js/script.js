@@ -10,6 +10,7 @@ let password=["special","upper","lower","number"];
 let dati;
 let outputGenerati;
 let cont=1;
+
 window.onload = function () {
 
     outputGenerati=document.getElementsByClassName("generati");
@@ -21,6 +22,8 @@ window.onload = function () {
         caricaCheck(checkBoxFiltri[i].value,checkBoxFiltri[i]);
         cambiaStatoCheck(checkBoxFiltri[i].value,checkBoxFiltri[i])
     }
+    $("#portfolio").slideUp();
+    $("#NomeCognomeFoto").slideUp();
 }
 function generateUsers() {
     if(txtUtenti.value!="")
@@ -132,6 +135,8 @@ function caricaDati()
     outputGenerati[4].innerText+=" "+ dati[indice].nat;
   outputGenerati[5].innerText+=" "+dati[indice].email;
     outputGenerati[6].innerText+=" "+dati[indice].login.password;
+    $("#portfolio").slideDown();
+    $("#NomeCognomeFoto").slideDown();
 }
 function pulisciDati(){
  for(let i=0;i<outputGenerati.length;i++)
